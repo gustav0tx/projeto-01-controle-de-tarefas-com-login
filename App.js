@@ -7,6 +7,8 @@ import verifyPass from './hooks/verifyPass'
 import { useState } from 'react';
 import UsingPage from './components/UsingPage';
 import handleRegister from './hooks/handleRegister';
+import finishTask from './hooks/finishTask'
+import deleteTask from './hooks/deleteTask' 
 
 export default function App() {
   const [name, setName] = useState('');
@@ -50,9 +52,9 @@ export default function App() {
       {(using && !logedShow) &&
 
         <UsingPage
-          user={{name: 'guga', pass: 123, list: [{name: 'comer'}, {name: 'comer'}]}} //botar user dps
-          fisishBtn={}
-          deleteBtn={}
+          user={{name: 'guga', pass: 123, list: [{name: 'comer', isFinished: false}, {name: 'comer', isFinished: false}]}} //botar user dps
+          fisishBtn={() => {finishTask()}}
+          deleteBtn={() => {deleteTask()}}
         />
 
       }

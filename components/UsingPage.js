@@ -28,14 +28,14 @@ export default function UsingPage({ user, fisishBtn, deleteBtn }) {
 
                             <View style={{flexDirection: 'row', gap: 10}}>
 
-                                <Pressable style={{ padding: 10, backgroundColor: 'green', borderRadius: 12 }}>
+                                <Pressable style={{ padding: 10, backgroundColor: 'green', borderRadius: 12 }} onPress={fisishBtn}>
                                     <Image
                                         source={require('../assets/correto.png')}
                                         style={{ height: 20, width: 20 }}
                                     />
                                 </Pressable>
 
-                                <Pressable style={{ padding: 10, backgroundColor: 'red', borderRadius: 12 }}>
+                                <Pressable style={{ padding: 10, backgroundColor: 'red', borderRadius: 12 }} onPress={deleteBtn}>
                                     <Image
                                         source={require('../assets/lata-de-lixo.png')}
                                         style={{ height: 20, width: 20 }}
