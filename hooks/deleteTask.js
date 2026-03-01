@@ -1,11 +1,8 @@
-const deleteTask = (array) => {
+const deleteTask = (taskId, tasksList, setTasksList) => {
 
-    return array.filter(task => {
-
-        
-
-    })
-
+    const filteredTasks = tasksList.filter(task => task.id !== taskId)
+    
+    setTasksList(filteredTasks)
 }
 
 export default deleteTask
